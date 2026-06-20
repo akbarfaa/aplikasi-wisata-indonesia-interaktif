@@ -59,7 +59,7 @@ export const destinations: Destination[] = [
       "id": "masjid Indonesia"
     },
     "description": {
-      "en": "Baiturrahman Grand Mosque \nis a mosque located in Banda Aceh, Aceh, Indonesia. The Baiturrahman Grand Mosque is a symbol of religion, culture, spirit, strength, struggle, and nationalism of the Acehnese people. The mosque is a landmark in Banda Aceh and has survived the 2004 Indian Ocean earthquake and tsunami.",
+      "en": "Baiturrahman Grand Mosque \r\nis a mosque located in Banda Aceh, Aceh, Indonesia. The Baiturrahman Grand Mosque is a symbol of religion, culture, spirit, strength, struggle, and nationalism of the Acehnese people. The mosque is a landmark in Banda Aceh and has survived the 2004 Indian Ocean earthquake and tsunami.",
       "id": "Masjid Raya Baiturrahman Banda Aceh atau yang lebih dikenal dengan Masjid Raya Baiturrahman atau Masjid Kesultanan Aceh adalah sebuah masjid bersejarah yang berada di Kota Banda Aceh, Provinsi Aceh, Indonesia. Masjid ini dibangun pada tahun 1879 dan merupakan simbol agama, budaya, semangat, kekuatan, perjuangan dan nasionalisme rakyat Aceh. Kemudian masjid ini adalah landmark Kota Banda Aceh sejak era Kesultanan Aceh dan Aceh saat ini. Masjid ini juga dikenal karena menjadi salah satu bangunan yang selamat dari gempa bumi dan tsunami tahun 2004."
     },
     "history": {
@@ -353,9 +353,9 @@ export const destinations: Destination[] = [
       103.7194,
       -1.4832
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Candi_Gumpung_Muaro_Jambi.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Megah_nya_Candi_Muaro_Jambi.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/f/f8/Candi_Gumpung_Muaro_Jambi.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/3/3e/Megah_nya_Candi_Muaro_Jambi.jpg"
     ],
     "ambience": "culture",
     "youtubeId": "l6XCSk_l6Pg",
@@ -1770,8 +1770,7 @@ export const destinations: Destination[] = [
     ],
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Teluk_Tomini.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/0/07/Teluk_Tomini.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/2/24/Gorontalo_coast.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/0/07/Teluk_Tomini.jpg"
     ],
     "ambience": "beach",
     "youtubeId": "e--C3KPx1no",
@@ -1830,9 +1829,9 @@ export const destinations: Destination[] = [
       118.9812,
       -3.5212
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Pantai_Dato_Majene.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Dato_Beach%2C_Majene.JPG",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Pantai_Dato_Majene.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/6/6d/Dato_Beach%2C_Majene.JPG"
     ],
     "ambience": "beach",
     "youtubeId": "QhpPYOAqg1k",
@@ -1963,8 +1962,8 @@ export const destinations: Destination[] = [
       "id": "halaman disambiguasi Wikimedia"
     },
     "description": {
-      "en": "Ternate, also known as the City of Ternate, is the \ncity with the largest population in the province of North Maluku and an island in the Maluku Islands, Indonesia. It was the de facto provincial capital of North Maluku before Sofifi on the nearby coast of Halmahera became the capital in 2010. It is off the west coast of Halmahera, and is composed of five islands: Ternate, the biggest and main island of the city, and Moti, Hiri, Tifure and Mayau. In total, the city has a land area of 162.20 square kilometres and had a total population of 185,705 according to the 2010 census, and 205,001 according to the 2020 census, with a density of 1,264 people per square kilometre; the official estimate as at mid 2024 was 210,836.",
-      "id": "Ternate dapat mengacu pada beberapa hal berikut:Bahasa Ternate\nKesultanan Ternate\nKota Ternate\nSuku Ternate\nPulau Ternate"
+      "en": "Ternate, also known as the City of Ternate, is the \r\ncity with the largest population in the province of North Maluku and an island in the Maluku Islands, Indonesia. It was the de facto provincial capital of North Maluku before Sofifi on the nearby coast of Halmahera became the capital in 2010. It is off the west coast of Halmahera, and is composed of five islands: Ternate, the biggest and main island of the city, and Moti, Hiri, Tifure and Mayau. In total, the city has a land area of 162.20 square kilometres and had a total population of 185,705 according to the 2010 census, and 205,001 according to the 2020 census, with a density of 1,264 people per square kilometre; the official estimate as at mid 2024 was 210,836.",
+      "id": "Ternate dapat mengacu pada beberapa hal berikut:Bahasa Ternate\r\nKesultanan Ternate\r\nKota Ternate\r\nSuku Ternate\r\nPulau Ternate"
     },
     "history": {
       "en": "Formerly a quiet shelter for local fishing boats now a marine eco geopark.",
@@ -2451,10 +2450,10 @@ export const villages: Village[] = [
     "id": "pentingsari",
     "name": "Pentingsari",
     "region": "Yogyakarta",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Pentingsari_village_Yogyakarta.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Joglo_Suyadi_%282%29.jpg",
     "about": {
-      "en": "Sleman Regency is an Indonesian regency on the island of Java. It is located in the north of the Special Region of Yogyakarta, Indonesia, and has an area of 574.82 square kilometres (221.94 sq mi), with a population of 1,093,110 at the 2010 Census and 1,125,804 at the 2020 Census; the official estimate as of mid-2023 was 1,157,292 - comprising 573,760 males and 583,540 females. Its capital is the town of Sleman. The current regent is Harda Kiswaya.",
-      "id": "Desa ekowisata berprestasi di lereng Gunung Merapi."
+      "en": "Pentingsari is an eco-tourism village located on the slopes of Mount Merapi in Sleman Regency, Yogyakarta. The village offers an authentic Javanese rural experience with traditional farming activities, Javanese cooking classes, gamelan music performances, and homestay packages in traditional Javanese houses (Joglo). Situated at 600 meters above sea level with views of Mount Merapi, it was awarded as one of the best tourism villages in Indonesia.",
+      "id": "Pentingsari adalah desa wisata eko-wisata yang terletak di lereng Gunung Merapi, Kabupaten Sleman, Yogyakarta. Desa ini menawarkan pengalaman pedesaan Jawa yang autentik dengan kegiatan bertani tradisional, kelas memasak Jawa, pertunjukan musik gamelan, dan paket homestay di rumah Joglo tradisional. Berada pada ketinggian 600 meter di atas permukaan laut dengan pemandangan Gunung Merapi."
     },
     "highlights": [
       {
@@ -2484,10 +2483,10 @@ export const villages: Village[] = [
     "id": "nglanggeran",
     "name": "Nglanggeran",
     "region": "Yogyakarta",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Embung_Nglanggeran_1.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Embung_Nglanggeran.jpg",
     "about": {
-      "en": "Best Tourism Village 2021 (UNWTO) built around ancient volcanic massif.",
-      "id": "Nglanggeran adalah desa di kecamatan Patuk, Gunungkidul, Daerah Istimewa Yogyakarta, Indonesia."
+      "en": "Nglanggeran is a village in Gunungkidul Regency, Yogyakarta, famous for its ancient volcano (Gunung Api Purba Nglanggeran), a 60-million-year-old extinct volcanic rock formation rising dramatically from the plain. The village offers trekking, camping, and cultural experiences amid breathtaking rock pillars. It has won the ASEAN Community-Based Tourism Award and is a model of sustainable community tourism.",
+      "id": "Nglanggeran adalah sebuah desa di Kabupaten Gunungkidul, Yogyakarta, yang terkenal dengan gunung api purbanya (Gunung Api Purba Nglanggeran), formasi batu vulkanik berusia 60 juta tahun yang menjulang dari dataran. Desa ini menawarkan trekking, berkemah, dan pengalaman budaya di antara pilar batu yang menakjubkan. Desa ini telah meraih Penghargaan Pariwisata Berbasis Komunitas ASEAN."
     },
     "highlights": [
       {
@@ -2517,10 +2516,10 @@ export const villages: Village[] = [
     "id": "sade",
     "name": "Desa Sade",
     "region": "Lombok",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sasak_traditional_house_Sade.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Desa_Sade%2C_Lombok.jpg",
     "about": {
-      "en": "A traditional Sasak village preserving ancestral weaving and clay floors.",
-      "id": "Desa tradisional Sasak yang menjaga tenun leluhur dan lantai tanah liat."
+      "en": "Sade is a traditional Sasak village in Lombok, Nusa Tenggara Barat, preserving the indigenous culture of the Sasak people. The village consists of traditional cylindrical bamboo houses with buffalo dung-polished floors, and the community still practices traditional weaving (tenun) and ceremonies. Sade is one of the last authentic Sasak hamlets open to visitors, offering a window into pre-Islamic Lombok culture.",
+      "id": "Sade adalah desa tradisional Sasak di Lombok, Nusa Tenggara Barat, yang melestarikan budaya asli suku Sasak. Desa ini terdiri dari rumah-rumah bambu silindris tradisional dengan lantai yang dipoles kotoran kerbau, dan komunitasnya masih mempraktikkan tenun tradisional dan upacara adat. Sade adalah salah satu dusun Sasak autentik terakhir yang terbuka untuk pengunjung."
     },
     "highlights": [
       {
@@ -2550,10 +2549,10 @@ export const villages: Village[] = [
     "id": "pujonkidul",
     "name": "Desa Wisata Pujon Kidul",
     "region": "Malang",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Pujon_Kidul_Malang.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/CAFE_SAWAH_PUJON_KIDUL.jpg",
     "about": {
-      "en": "A thriving agricultural eco-village surrounded by green hills.",
-      "id": "Pujon Kidul adalah sebuah desa di wilayah Kecamatan Pujon, Kabupaten Malang, Provinsi Jawa Timur. Desa ini merupakan desa terbesar di Indonesia."
+      "en": "Pujon Kidul is an award-winning agro-tourism village in Malang Regency, East Java, known for its innovative community-based tourism model. The village sits at 1,200 meters above sea level amidst dairy farms, vegetable gardens, and stunning mountain scenery. Visitors can milk cows, pick fresh vegetables, enjoy café with panoramic views, and experience traditional Javanese farming life. It has been recognized as one of the best tourism villages in Indonesia by the Ministry of Tourism.",
+      "id": "Pujon Kidul adalah desa agrowisata pemenang penghargaan di Kabupaten Malang, Jawa Timur, yang terkenal dengan model pariwisata berbasis komunitas yang inovatif. Desa ini berada pada ketinggian 1.200 meter di atas permukaan laut di antara peternakan sapi perah, kebun sayuran, dan pemandangan pegunungan yang menakjubkan. Pengunjung dapat memerah susu sapi, memetik sayuran segar, dan menikmati kehidupan pertanian Jawa tradisional."
     },
     "highlights": [
       {
@@ -2583,10 +2582,10 @@ export const villages: Village[] = [
     "id": "liangndara",
     "name": "Desa Liang Ndara",
     "region": "Flores",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Manggarai_traditional_dance.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Caci_Dance.jpg",
     "about": {
-      "en": "Flores is one of the Lesser Sunda Islands, a group of islands in the eastern half of Indonesia. Administratively, it forms the largest island in the East Nusa Tenggara Province. The area is 14,250 km2. Including Komodo and Rinca islands off its west coast, the population was 1,878,875 in the 2020 Census ; the official estimate as of mid-2024 was 2,014,110. The largest town are Maumere. The name Flores is of Portuguese origin, meaning \"Flowers\".",
-      "id": "Liang Ndara adalah nama sebuah desa di Kecamatan Mbeliling, Kabupaten Manggarai Barat, Nusa Tenggara Timur."
+      "en": "Liang Ndara is a traditional Manggarai village in West Manggarai Regency, Flores, located near the famous Wae Rebo. The village preserves authentic Manggarai culture including the traditional circular communal house (Mbaru Niang), traditional weaving (songket), and the caci whip-fighting ritual. The surrounding landscape features terraced rice fields, tropical forests, and mountain scenery characteristic of inland Flores.",
+      "id": "Liang Ndara adalah sebuah desa tradisional Manggarai di Kabupaten Manggarai Barat, Flores, yang terletak dekat Wae Rebo yang terkenal. Desa ini melestarikan budaya Manggarai yang autentik termasuk rumah komunal melingkar tradisional (Mbaru Niang), tenun tradisional (songket), dan ritual adu cambuk caci. Lanskapnya menampilkan sawah terasering, hutan tropis, dan pemandangan gunung khas pedalaman Flores."
     },
     "highlights": [
       {
@@ -2616,10 +2615,10 @@ export const villages: Village[] = [
     "id": "ketekesu",
     "name": "Desa Kete Kesu",
     "region": "Toraja",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Tongkonan_Ketekesu.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Ke%27te%27_Kesu%27.jpg",
     "about": {
-      "en": "A historic 400-year-old Torajan settlement featuring cliff-side tombs.",
-      "id": "Pemukiman bersejarah Toraja berusia 400 tahun dengan makam tebing."
+      "en": "Ke'te' Kesu' is a traditional Toraja village and cultural heritage site in Tana Toraja, South Sulawesi. It is one of the most complete and well-preserved examples of a traditional Torajan settlement, featuring rows of stately Tongkonan clan houses with distinctive boat-shaped roofs, rice barns (alang), and elaborate wood carvings. Behind the village lies ancient cliff graves (liang) and hanging graves, some over 500 years old. The site is a UNESCO tentative world heritage listing.",
+      "id": "Ke'te' Kesu' adalah sebuah desa tradisional Toraja dan situs warisan budaya di Tana Toraja, Sulawesi Selatan. Ini adalah salah satu contoh pemukiman Toraja tradisional yang paling lengkap dan terawat, menampilkan deretan rumah adat Tongkonan yang megah dengan atap berbentuk perahu, lumbung padi (alang), dan ukiran kayu yang rumit. Di belakang desa terdapat makam tebing kuno (liang) dan makam gantung, beberapa berusia lebih dari 500 tahun."
     },
     "highlights": [
       {
@@ -2661,35 +2660,35 @@ const byIsland = (island: string, n: number) => (visited: string[]) =>
 export const achievements: Achievement[] = [
   {
     id: "first-step",
-    icon: "compass",
+    icon: "🌱",
     title: { en: "First Step", id: "Langkah Pertama" },
     description: { en: "Collect your first passport stamp.", id: "Kumpulkan cap paspor pertama." },
     requirement: (v) => v.length >= 1,
   },
   {
     id: "java-explorer",
-    icon: "landmark",
+    icon: "🛕",
     title: { en: "Java Explorer", id: "Penjelajah Jawa" },
     description: { en: "Visit 2 destinations in Java.", id: "Kunjungi 2 destinasi di Jawa." },
     requirement: byIsland("Java", 2),
   },
   {
     id: "bali-explorer",
-    icon: "palmtree",
+    icon: "🌺",
     title: { en: "Bali Explorer", id: "Penjelajah Bali" },
     description: { en: "Visit 1 destination in Bali.", id: "Kunjungi 1 destinasi di Bali." },
     requirement: byIsland("Bali", 1),
   },
   {
     id: "sumatra-explorer",
-    icon: "trees",
+    icon: "🐯",
     title: { en: "Sumatra Explorer", id: "Penjelajah Sumatra" },
     description: { en: "Visit 1 destination in Sumatra.", id: "Kunjungi 1 destinasi di Sumatra." },
     requirement: byIsland("Sumatra", 1),
   },
   {
     id: "marine-master",
-    icon: "waves",
+    icon: "🐠",
     title: { en: "Marine Adventure Master", id: "Master Petualangan Bahari" },
     description: { en: "Stamp 2 marine destinations.", id: "Cap 2 destinasi bahari." },
     requirement: (v) =>
@@ -2697,7 +2696,7 @@ export const achievements: Achievement[] = [
   },
   {
     id: "grand-explorer",
-    icon: "trophy",
+    icon: "🏆",
     title: { en: "Indonesia Grand Explorer", id: "Penjelajah Agung Indonesia" },
     description: { en: "Collect 6 stamps.", id: "Kumpulkan 6 cap." },
     requirement: (v) => v.length >= 6,

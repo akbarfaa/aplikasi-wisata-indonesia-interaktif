@@ -16,7 +16,7 @@ const VERIFIED = {
   harau:          { main: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Lembah_harau_50_kota.jpg' },
   siak:           { main: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Istana_Kerajaan_Siak_(2).jpg' },
   penyengat:      { main: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Pulau_Penyengat.jpg' },
-  muarojambi:     { main: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Candi_Gumpung_Muaro_Jambi.jpg' },
+  muarojambi:     { main: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Megah_nya_Candi_Muaro_Jambi.jpg' },
   ampera:         { main: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Ampera_Bridge_at_Night%2C_Palembang.jpg' },
   belitung:       { main: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Belitung_Topography.png' },
   marlborough:    { main: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Front_gate_of_Fort_Marlborough%2C_Bengkulu_2015-04-19_02.jpg' },
@@ -40,7 +40,7 @@ const VERIFIED = {
   toraja:         { main: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Ke\'te\'_Kesu\'_1.jpg' },
   wakatobi:       { main: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Wakatobi_beach_2006.jpg' },
   olele:          { main: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Teluk_Tomini.jpg' },
-  pantaidato:     { main: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Pantai_Dato_Majene.jpg' },
+  pantaidato:     { main: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Dato_Beach%2C_Majene.JPG' },
   bandaneira:     { main: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Bandaneira-0039.JPG' },
   sulamadaha:     { main: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Ternate_in_sight.jpg' },
   sentani:        { main: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Sentani_Lake.jpg' },
@@ -52,12 +52,12 @@ const VERIFIED = {
   // Villages
   penglipuran:    { main: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/ID-bali-penglipuran-2.jpg' },
   waerebo:        { main: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Wae_Rebo_di_Pagi_Hari.jpg' },
-  pentingsari:    { main: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Pentingsari_village_Yogyakarta.jpg' },
-  nglanggeran:    { main: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Embung_Nglanggeran_1.jpg' },
-  sade:           { main: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sasak_traditional_house_Sade.jpg' },
-  pujonkidul:     { main: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Pujon_Kidul_Malang.jpg' },
-  liangndara:     { main: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Manggarai_traditional_dance.jpg' },
-  ketekesu:       { main: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Tongkonan_Ketekesu.jpg' },
+  pentingsari:    { main: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Joglo_Suyadi_%282%29.jpg' },
+  nglanggeran:    { main: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Embung_Nglanggeran.jpg' },
+  sade:           { main: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Desa_Sade%2C_Lombok.jpg' },
+  pujonkidul:     { main: 'https://upload.wikimedia.org/wikipedia/commons/4/41/CAFE_SAWAH_PUJON_KIDUL.jpg' },
+  liangndara:     { main: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Caci_Dance.jpg' },
+  ketekesu:       { main: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Ke%27te%27_Kesu%27.jpg' },
 };
 
 // ─── Village description patches for those with undefined/thin descriptions ──
@@ -100,25 +100,75 @@ const VILLAGE_DESC_PATCHES = {
   },
 };
 
-function parseCSV(text) {
-  const lines = text.trim().split('\n');
-  const headers = csvLine(lines[0]);
-  return { headers, rows: lines.slice(1).filter(Boolean).map(l => { const v = csvLine(l); return Object.fromEntries(headers.map((h,i) => [h, v[i]??''])); }) };
-}
-function csvLine(line) {
-  const res=[]; let cur=''; let q=false;
-  for(let i=0;i<line.length;i++){
-    const c=line[i];
-    if(c==='"'&&!q) q=true;
-    else if(c==='"'&&q){ if(line[i+1]==='"'){cur+='"';i++;}else q=false; }
-    else if(c===','&&!q){ res.push(cur); cur=''; }
-    else cur+=c;
+function parseCSV(content) {
+  const lines = [];
+  let row = [];
+  let cell = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < content.length; i++) {
+    const char = content[i];
+    const nextChar = content[i + 1];
+
+    if (inQuotes) {
+      if (char === '"') {
+        if (nextChar === '"') {
+          cell += '"';
+          i++; // skip next char
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        cell += char;
+      }
+    } else {
+      if (char === '"') {
+        inQuotes = true;
+      } else if (char === ",") {
+        row.push(cell.trim());
+        cell = "";
+      } else if (char === "\r" || char === "\n") {
+        if (char === "\r" && nextChar === "\n") {
+          i++; // skip \n
+        }
+        row.push(cell.trim());
+        if (row.length > 1 || row[0] !== "") {
+          lines.push(row);
+        }
+        row = [];
+        cell = "";
+      } else {
+        cell += char;
+      }
+    }
   }
-  res.push(cur); return res;
+  if (cell !== "" || row.length > 0) {
+    row.push(cell.trim());
+    lines.push(row);
+  }
+
+  const headers = lines[0];
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const r = lines[i];
+    if (r.length < headers.length) continue;
+    const obj = {};
+    for (let j = 0; j < headers.length; j++) {
+      obj[headers[j]] = r[j];
+    }
+    rows.push(obj);
+  }
+  return { headers, rows };
 }
+
 function serializeCSV(rows, headers) {
-  const e=v=>{ const s=String(v??''); return (s.includes(',')||s.includes('"')||s.includes('\n'))?'"'+s.replace(/"/g,'""')+'"':s; };
-  return [headers.join(','),...rows.map(r=>headers.map(h=>e(r[h])).join(','))].join('\n')+'\n';
+  const e = (v) => {
+    const s = String(v ?? '');
+    return (s.includes(',') || s.includes('"') || s.includes('\n') || s.includes('\r'))
+      ? '"' + s.replace(/"/g, '""') + '"'
+      : s;
+  };
+  return [headers.join(','), ...rows.map(r => headers.map(h => e(r[h])).join(','))].join('\n') + '\n';
 }
 
 async function main() {
@@ -132,19 +182,31 @@ async function main() {
   console.log('\n🔧 Fixing images + patching village descriptions...\n');
 
   // Fix images in destinations
-  let destFixed=0;
+  let destFixed = 0;
   for (const row of dest.rows) {
     const v = VERIFIED[row.id];
-    if (v?.main) { row.image = v.main; row.gallery = v.main; destFixed++; }
+    if (v?.main) { 
+      row.image = v.main; 
+      row.gallery = v.main; 
+      destFixed++; 
+    }
   }
 
   // Fix images + patch descriptions in villages
-  let villFixed=0, villPatched=0;
+  let villFixed = 0, villPatched = 0;
   for (const row of vill.rows) {
     const v = VERIFIED[row.id];
-    if (v?.main) { row.image = v.main; row.gallery = v.main; villFixed++; }
+    if (v?.main) { 
+      row.image = v.main; 
+      villFixed++; 
+    }
     const patch = VILLAGE_DESC_PATCHES[row.id];
-    if (patch) { Object.assign(row, patch); villPatched++; }
+    if (patch) { 
+      // Update fields
+      row.about_en = patch.description_en;
+      row.about_id = patch.description_id;
+      villPatched++; 
+    }
   }
 
   fs.writeFileSync(destPath, serializeCSV(dest.rows, dest.headers), 'utf-8');

@@ -66,13 +66,17 @@ function extractFilename(url) {
 
 function checkUrl(url) {
   return new Promise((resolve) => {
+    const parsed = new URL(url);
     const options = {
-      method: "HEAD",
+      method: "GET",
+      hostname: parsed.hostname,
+      path: parsed.pathname + parsed.search,
       headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        "User-Agent": "IndonesiaTourismOpenAPI/4.0 (educational open source project; contact: admin@indonesiatourismopenapi.org)",
+        "Range": "bytes=0-1024" // only request first KB to speed up and save bandwidth
       }
     };
-    const req = https.request(url, options, (res) => {
+    const req = https.request(options, (res) => {
       resolve(res.statusCode);
     });
     req.on("error", (e) => {
@@ -81,6 +85,8 @@ function checkUrl(url) {
     req.end();
   });
 }
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function main() {
   const destPath = path.join(__dirname, "../data/destinations.csv");
@@ -105,6 +111,7 @@ async function main() {
     const url = destRows[i][destImgIdx];
     const status = await checkUrl(url);
     console.log(`[Destination] ${name}: Status ${status} (${url})`);
+    await delay(300);
     if (status === 404 && url.includes("wikimedia.org")) {
       const filename = extractFilename(url);
       if (filename) {
@@ -112,6 +119,7 @@ async function main() {
         console.log(`  -> Corrected Candidate: ${corrected}`);
         const corrStatus = await checkUrl(corrected);
         console.log(`  -> Corrected Status: ${corrStatus}`);
+        await delay(300);
       }
     }
   }
@@ -122,6 +130,7 @@ async function main() {
     const url = villRows[i][villImgIdx];
     const status = await checkUrl(url);
     console.log(`[Village] ${name}: Status ${status} (${url})`);
+    await delay(300);
     if (status === 404 && url.includes("wikimedia.org")) {
       const filename = extractFilename(url);
       if (filename) {
@@ -129,6 +138,7 @@ async function main() {
         console.log(`  -> Corrected Candidate: ${corrected}`);
         const corrStatus = await checkUrl(corrected);
         console.log(`  -> Corrected Status: ${corrStatus}`);
+        await delay(300);
       }
     }
   }
